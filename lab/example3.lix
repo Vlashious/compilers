@@ -1,0 +1,20 @@
+// open xml document and set attributes with name "ToReplace" to 10.
+
+meth Document Replace doc attributeName:
+    for node in doc:
+        for attr in node:
+            if attr.name == "ToReplace":
+                attr.value = 10
+    return doc
+
+doc.is Document
+doc.Open "doc.xml"
+
+doc.is Replace doc "ToReplace"
+
+doc.Save "doc.xml"
+
+
+// Attribute has two reserved properties: name and value.
+// Document has two reserved methods: Open and Save
+// Node has reserved property: name

@@ -1,0 +1,42 @@
+// define xml document and add a node with 10 attributes
+
+<xml>
+<Prop1>10</Prop1>
+<Prop2>30</Prop2>
+<Prop3>
+    <Prop4>15<Prop4>
+</Prop3>
+</xml>
+document.is Document:
+    "Prop1" = 10
+    "Prop2" = 30
+    "Prop3" = Node:
+        "Prop4" = 15
+
+nodeToAdd.is Node "Alice"
+
+for i in 1..10:
+    nodeToAdd.add Attribute:
+        i = i
+
+document.add nodeToAdd
+
+<xml>
+<Prop1>10</Prop1>
+<Prop2>30</Prop2>
+<Prop3>
+    <Prop4>15<Prop4>
+</Prop3>
+<Alice>
+    <1>1</1>
+    <2>2</2>
+    <3>3</3>
+    <4>4</4>
+    <5>5</5>
+    <6>6</6>
+    <7>7</7>
+    <8>8</8>
+    <9>9</9>
+    <10>10</10>
+</Alice>
+</xml>
