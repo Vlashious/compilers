@@ -1,9 +1,9 @@
 // check if document has attribute "OMG". if it exists, remove it
-
-doc.is Document
+doc.is Document: ()
 doc.Open "doc.xml"
 
-if doc.has "OMG":
+if doc.has "OMG": (
     doc.remove "OMG"
+    )
 
-else print "There is no attribute "OMG""
+else (print "There is no attribute OMG")

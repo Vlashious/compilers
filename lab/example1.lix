@@ -7,17 +7,21 @@
     <Prop4>15<Prop4>
 </Prop3>
 </xml>
-document.is Document:
-    "Prop1" = 10
-    "Prop2" = 30
-    "Prop3" = Node:
-        "Prop4" = 15
+document.is Document:(
+    "Prop1" = 10,
+    "Prop2" = 30,
+    "Prop3" = Node:(
+        "Prop4" = 15))
 
-nodeToAdd.is Node "Alice"
+nodeToAdd.is Node : ()
+nodeToAdd.name = "Alice"
+node.value = doc
 
-for i in 1..10:
-    nodeToAdd.add Attribute:
+for i in 1..10: (
+    nodeToAdd.add Attribute:(
         i = i
+        )
+    )
 
 document.add nodeToAdd
 

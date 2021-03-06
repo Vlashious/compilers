@@ -1,16 +1,22 @@
 // open xml document and set attributes with name "ToReplace" to 10.
 
-meth Document Replace doc attributeName:
-    for node in doc:
-        for attr in node:
-            if attr.name == "ToReplace":
+meth Document Replace 
+Document: doc 
+String: attributeName:(
+    for node in doc:(
+        for attr in node:(
+            if attr.name == "ToReplace":(
                 attr.value = 10
+            )
+        )
+    )
     return doc
+)
 
-doc.is Document
+doc.is Document: ()
 doc.Open "doc.xml"
 
-doc.is Replace doc "ToReplace"
+doc = Replace doc "ToReplace"
 
 doc.Save "doc.xml"
 
